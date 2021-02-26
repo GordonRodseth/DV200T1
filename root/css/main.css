@@ -1,0 +1,119 @@
+.html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, .row, div, .container-fluid{
+    padding: 0;
+    margin: 0;
+    font-family: 'Spartan', sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background-color: #EFE5D9;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{ color: rgb(221, 221, 221);}
+
+html{
+    width: 100%;
+}
+
+.navbar{
+    background-color: black;
+    color: white;
+    height: 7vh;
+    padding-left: 3vw;
+    position: fixed;
+    z-index: 2;
+}
+
+.nav-items{
+    color: white;
+    float: right;
+    margin-right: 5vw;
+}
+
+.nav-item{
+    display: inline-block;
+}
+
+.nav-item:hover{
+    cursor: pointer;
+}
+
+.icon{
+    width:3vw;
+    margin-right: 1vw;
+}
+
+
+.header{
+    height: 93vh;
+    padding: 0;
+}
+
+.slide{
+    height: 100%;
+    width: 100%;
+}
+
+.slide-1{
+    background-color: brown;
+}
+
+.slide-2{
+    background-color: blueviolet;
+}
+
+.slide-3{
+    background-color: coral;
+}
+
+.heading{
+    background-color: white; 
+    border: black;
+    border-style: solid; 
+    border-width: thick;
+    color: black; 
+    padding: 3%; 
+    margin-top: 10vh; 
+    width: fit-content;
+}
+
+.textbox{
+    color: white;
+    background-color: black;
+    text-emphasis: bold;
+    padding: 5%;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 10vh;
+}
+
+.cart-overlay{
+    height: 100%;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 0;
+    z-index: 2;
+    display: block;
+    position: fixed;
+}
+
+.cart{
+    height: 90vh;
+    background-color: blanchedalmond ;
+    box-shadow: black;
+    z-index: 2;
+    display: block;
+    position: fixed;
+    float: right;
+    margin-top: 7vh;
+    right: 0;
+}
