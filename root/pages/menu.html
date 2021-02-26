@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="eng-US">
+    <head>
+    <meta name="subject" content="IDV200">
+    <meta name="Lecturer" content="Mike Maynard">
+    <meta name="StudentNumber" content="200055">
+    <meta name="StudentName" content="Gordon Rodseth">
+    <meta name="Assessment" content="Term1 Project">
+    <meta charset="utf-8">
+    <script src="../js/data.js"></script>
+    <script src="../js/index.js"></script>
+
+    <title>Coffee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/index.js"></script>
+    <!--css-->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <!--link font selection - choose font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div class="container-fluid">
+
+            <nav class="navbar row col-12">
+                <a class="icon-link" href="../index.html"><img src="../assets/coffee-icon.svg" class="icon"></a><!--top-left logo-->
+                
+                <div class="nav-items">
+                    <div class="nav-item"><a class="nav-link" href="menu.html">Menu</a></div>
+                    <div class="nav-item"><div class="button showcart">Cart</div></div>                    
+                </div>
+                
+            </nav><!--end of navbar-->
+
+            <div class="cart-overlay hide">
+                <nav class="navbar row col-12">
+                    <a class="icon-link" href="../index.html"><img src="../assets/coffee-icon.svg" class="icon"></a><!--top-left logo-->
+
+                    <div class="nav-items">
+                        <div class="nav-item"><a class="nav-link" href="menu.html">Menu</a></div>
+                        <div class="nav-item"><div class="button showcart">Cart</div></div>                    
+                    </div>
+                </nav><!--end of navbar-->
+                
+                <div class="cart col-4"></div>
+            </div><!--cart-->
+
+            <div class="content row col-12">
+
+                <div class="col-12" style="height: 20vh;">
+                </div>
+
+                <div class="col-5"></div>
+
+                <div class="col-2" style="background-color: black; height: 10vh; color: white;text-align: center; font-size: xxx-large; padding-top: 1%;">The Menu</div>
+
+                <div class="col-5"></div>
+
+                <div class="well-side col-1"></div>
+
+                <div class="well col-10">
+
+                    <div class="coffees row col-12" style="justify-content: center;">
+                        <div class="coffee col-4" id="Latte">
+                            <div class="label"><h1>Latte</h1></div>
+                        </div>
+
+                        <div class="coffee col-4 active" id="Americano">
+                            <div class="label"><h1>Americano</h1></div>
+                        </div>
+
+                        <div class="coffee col-4" id="Cappucino">
+                            <div class="label"><h1>Cappucino</h1></div>
+                        </div>
+                    </div>
+
+                    <div class="order-form row col-12">
+
+                        <div class="info row col-8">
+                            <div class="name col-12" style="height: 10%; background-color: white; border: black; border-style: solid; border-width: thick; text-align: center;"><h1 id="coffee-name">Americano</h1></div>
+                            <div class="description col-6" style="height:90%; background-color: #BAA285"><p id="coffee-desc"></p></div>
+                            <div class="pic col-6" style="height:90%; background-color: #BAA285; "></div>
+                        </div>
+
+                        <div class="options row col-4">
+                            <div class="size col-9" style="height: 100%; background-color: #fdf8f2; border: black; border-style: solid; border-width: thin; text-align: center;">
+                                <div class="title" style="height:10%;  background-color: #C6BDB2; text-align: center;"><h1>Size</h1></div>
+                                <div class="size-option" style="background-color: #fdf8f2"><h2>Small</h2></div>
+                                <div class="size-option" style="background-color: #C6BDB2;"><h2>Tall</h2></div>
+                                <div class="size-option" style="background-color: #fdf8f2; "><h2>Grande</h2></div>
+                            </div>
+                            <div class="addons col-3 row" style="height: 100%; background-color: #BAA285; padding: 0;">
+                                <div class="title col-12" style="background-color: #BAA285; font-size: medium; height: 10%; padding: 0;"><h2>Extras<</h2></div>
+                                <div class="extras-options col-12" style="height: 70%; padding: 0%;">
+                                    <div class="extra-option hide" style="height: 12.5%; background-color: white;"></div>
+                                    <div class="extra-option hide" style="height: 12.5%; background-color: #BAA285;"></div>
+                                    <div class="extra-option hide" style="height: 12.5%; background-color: white"></div>
+                                    <div class="extra-option hide" style="height: 12.5%; background-color: #BAA285;"></div>
+                                    <div class="extra-option hide" style="height: 12.5%; background-color: white"></div>
+                                    <div class="extra-option hide" style="height: 12.5%; background-color: #BAA285;"></div>
+                                    <div class="extra-option hide" style="height: 12.5%; background-color: white"></div>
+                                    <div class="extra-option hide" style="height: 12.5%; background-color: #BAA285;"></div>
+                                </div>
+                                <div class="nexttopriceandcart hide col-9" style="padding: 0;">
+                                    <div class="nexttoprice hide col-12 " style="height: 50%; background-color: white;"></div>
+                                    <div class="spec-in hide col-12" style="height: 50%; background-color: #BAA285"></div>
+                                </div>
+
+                                <div class="priceandcart col-12" style="padding: 0%; height: 20%;">
+                                    <div class="price" style="height: 50%; background-color: white; padding-top: 10%; text-emphasis: bold;">Price</div>
+                                    <div class="addtocart" style=" height: 50%; background-color: black; color: white; padding-top: 10%; text-align: center;">Add to Cart</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                <div class="well-side col-1"></div>
+            </div>
+
+            <footer class="footer row col-12">
+                
+                <div class="well col-4"></div>
+
+                <div class="well col-4" style="text-align: center; vertical-align: middle;">
+                    Open Window 2021
+                </div>
+
+                <div class="well col-4">
+                    
+                    <ul class="socials" style="float: right;">
+                        <a href="https://web.facebook.com/?_rdc=1&_rdr"><img src="../assets/facebook.svg" class="icon"></a>
+                        <a href="https://www.youtube.com/"><img src="../assets/youtube.svg" class="icon"></a>
+                        <a href="https://www.instagram.com/"><img src="../assets/instagram.svg" class="icon"></a>
+                    </ul><!--socialmedia-->
+                </div>
+            </footer><!--end of footer-->
+
+        </div><!--end of cont fluid-->
+    </body>
+
+</html>
