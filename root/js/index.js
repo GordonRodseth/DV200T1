@@ -58,8 +58,9 @@ $(function(){
 
         $(".description").toggle();
 
-        $(".pic").toggleClass("col-6");
-        $(".pic").toggleClass("col-12");
+        $(".pics").toggleClass("col-6");
+        $(".pics").toggleClass("col-12");
+        $(".pic").toggle();
 
         $(".extra-option").toggle();
         $(".spec-in").toggle();
