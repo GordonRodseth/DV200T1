@@ -3,6 +3,11 @@
     margin: 0;
     font-family: 'Spartan', sans-serif;
     text-decoration: none;
+    font-size: 2vw;
+}
+
+p{
+    font-size: 1vw;
 }
 
 body{

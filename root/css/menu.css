@@ -30,7 +30,6 @@
     margin-bottom: 40%;
     text-align: center;
     padding: 3%;
-    font-size: large;
 }
 
 .order-form{
@@ -53,11 +52,34 @@
 .addons{
     padding: 0%;
 }
-.addons:hover{
+.extras-title{
     cursor: pointer;
 }
 .size{
     padding: 0%;
+}
+
+.extra-option{
+    height: 11%;
+    font-size: 1vw;
+}
+.extra-name{
+    width: 40%;
+    padding: 2%;
+    font-size: 1vw;
+    justify-content: left;
+    float: left;
+}
+.check{
+    border-radius: 50%;
+    border-style: solid;
+    border: black;
+    background-color: rgb(255, 0, 0);
+    width: 15px;
+    height: 15px;
+}
+.check.selected{
+    background-color: black;
 }
 
 #coffee-name{
@@ -66,3 +88,77 @@
     padding-top: 1%;
 }
 
+.extra{
+    width:100%;
+    height: 100%;
+}
+
+.honey{
+    background-image: url(../assets/bees.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.sugar{
+    background-image: url(../assets/sugar.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.milk{
+    background-image: url(../assets/milk.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.carm{
+    background-image: url(../assets/syrup_carm.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.haze{
+    background-image: url(../assets/syrup_hazel.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.ex7{
+    background-image: url(../assets/cup-amo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ex7p5{
+    background-image: url(../assets/steam.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left, bottom;
+}
+
+.espresso{
+    background-image: url(../assets/espresso.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.cream{
+    background-image: url(../assets/cream.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.cin{
+    background-image: url(../assets/cinnamon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.van{
+    background-image: url(../assets/vanilla.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

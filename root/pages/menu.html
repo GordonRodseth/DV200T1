@@ -60,7 +60,7 @@
 
                 <div class="col-5"></div>
 
-                <div class="col-2" style="background-color: black; height: 10vh; color: white;text-align: center; font-size: xxx-large; padding-top: 1%;">The Menu</div>
+                <div class="col-2" style="background-color: black; height: fit-content; color: white; text-align: center; font-size: 2vw; padding: 2%;">The Menu</div>
 
                 <div class="col-5"></div>
 
@@ -89,30 +89,49 @@
                             <div class="description col-6" style="height:90%; background-color: #BAA285"><p id="coffee-desc"></p></div>
                             <div class="pics row col-6" style="height:90%; background-color: #BAA285; ">
 
-                                <div class="pic row col-12 hide" style="height: 85%; background-color: aqua;">
+                                <div class="pic row col-12 hide" style="height: 85%;">
 
-                                    <div class="ex1 col-5" style="background-color: brown; height: 35%"></div>
-                                    <div class="ex7p5 col-2" style="height: 35%; background-color: blueviolet;"></div>
-                                    <div class="ex2n3 row col-3" style="height: 35%;">
-                                        <div class="ex2 col-12" style="background-color: crimson; height: 50%;"></div>
-                                        <div class="ex3 col-12" style="background-color: blue; height: 50%;"></div>
+                                    <div class="ex1 col-5" style="height: 35%">
+                                        <div class="extra honey hide"></div>
                                     </div>
-                                    <div class="ex4 col-2" style="background-color: rgb(112, 44, 44); height: 35%;"></div>
+                                    <div class="ex7p5 col-2" style="height: 35%;"></div>
+                                    <div class="ex2n3 row col-3" style="height: 35%;">
+                                        <div class="ex2 col-12" style=" height: 50%;">
+                                            <div class="extra sugar hide"></div>
+                                        </div>
+                                        <div class="ex3 col-12" style=" height: 50%;">
+                                            <div class="extra milk hide"></div>
+                                        </div>
+                                    </div>
+                                    <div class="ex4 col-2" style="height: 35%;"></div>
 
-                                    <div class="ex5 col-2" style="background-color: orangered; height:50%;"></div>
-                                    <div class="ex6 col-2" style="background-color: orange; height:50%;"></div>
-                                    <div class="ex7 col-4" style="background-color: blueviolet; height:50%;"></div>
-                                    <div class="ex8 col-2" style="background-color: orange; height:50%;"></div>
-                                    <div class="ex9 col-2" style="background-color: orangered; height:50%;"></div>
+                                    <div class="ex5 col-2" style="height:50%;">
+                                        <div class="extra carm hide"></div>
+                                    </div>
+                                    <div class="ex6 col-2" style="height:50%;">
+                                        <div class="extra haze hide"></div>
+                                    </div>
+                                    <div class="ex7 col-4" style="height:50%;"></div>
+                                    <div class="ex8 col-2" style="height:50%;">
+                                        <div class="extra espresso hide"></div>
+                                    </div>
+                                    <div class="ex9 col-2" style="height:50%;">
+                                        <div class="extra cream hide"></div>
+                                    </div>
 
-
-                                    <div class="ex10 col-6" style="background-color: teal; height: 15%;"></div>
-                                    <div class="ex11 col-6" style="background-color: rgb(0, 255, 255); height: 15%;"></div>
+                                    <div class="col-3" style="height: 15%;"></div>
+                                    <div class="ex10 col-3" style="height: 15%;">
+                                        <div class="extra cin hide"></div>
+                                    </div>
+                                    <div class="ex11 col-3" style="height: 15%;">
+                                        <div class="extra van hide"></div>
+                                    </div>
+                                    <div class="col-3" style="height: 15%;"></div>
 
                                 </div>
                                 <div class="madewith col-12" style="height: 15%; background-color: #BAA285;"></div>
 
-                            </div><!--picture of coffee-->
+                            </div><!--picture of coffee and additions-->
                         </div>
 
                         <div class="options row col-4">
@@ -123,25 +142,53 @@
                                 <div class="size-option" style="background-color: #fdf8f2; "><h2>Grande</h2></div>
                             </div>
                             <div class="addons col-3 row" style="height: 100%; background-color: #BAA285; padding: 0;">
-                                <div class="title col-12" style="background-color: #BAA285; font-size: medium; height: 10%; padding: 0;"><h2>Extras<</h2></div>
-                                <div class="extras-options col-12" style="height: 70%; padding: 0%;">
-                                    <div class="extra-option hide" style="height: 12.5%; background-color: white;"></div>
-                                    <div class="extra-option hide" style="height: 12.5%; background-color: #BAA285;"></div>
-                                    <div class="extra-option hide" style="height: 12.5%; background-color: white"></div>
-                                    <div class="extra-option hide" style="height: 12.5%; background-color: #BAA285;"></div>
-                                    <div class="extra-option hide" style="height: 12.5%; background-color: white"></div>
-                                    <div class="extra-option hide" style="height: 12.5%; background-color: #BAA285;"></div>
-                                    <div class="extra-option hide" style="height: 12.5%; background-color: white"></div>
-                                    <div class="extra-option hide" style="height: 12.5%; background-color: #BAA285;"></div>
+                                <div class="extras-title col-12" style="background-color: #BAA285; height: 80%; padding: 0;"><h1 style="font-size: 1.5vw">Extras<</h1></div>
+                                <div class="extras-options hide col-12" style="height: 70%; padding: 0%;">
+                                    <div class="extra-option" style="background-color: white;">
+                                        <div class="extra-name">Sugar</div>
+                                        <button class="check" id="sugar"></button>
+                                    </div>
+                                    <div class="extra-option" style="background-color: #BAA285;">
+                                        <div class="extra-name">Cream</div>
+                                        <button class="check" id="cream"></button>
+                                    </div>
+                                    <div class="extra-option" style="background-color: white">
+                                        <div class="extra-name">Extra Milk</div>
+                                        <button class="check" id="milk"></button>
+                                    </div>
+                                    <div class="extra-option" style="background-color: #BAA285;">
+                                        <div class="extra-name">Extra Espresso</div>
+                                        <button class="check" id="espresso"></button>
+                                    </div>
+                                    <div class="extra-option" style="background-color: white">
+                                        <div class="extra-name">Honey</div>
+                                        <button class="check" id="honey"></button>
+                                    </div>
+                                    <div class="extra-option" style="background-color: #BAA285;">
+                                        <div class="extra-name">Caramel Syrup</div>
+                                        <button class="check" id="carm"></button>
+                                    </div>
+                                    <div class="extra-option" style="background-color: white;">
+                                        <div class="extra-name">Hazelnut Syrup</div>
+                                        <button class="check" id="haze"></button>
+                                    </div>
+                                    <div class="extra-option" style="background-color: #BAA285">
+                                        <div class="extra-name">Cinnamon</div>
+                                        <button class="check" id="cin"></button>
+                                    </div>
+                                    <div class="extra-option" style="background-color: white;">
+                                        <div class="extra-name">Vanilla</div>
+                                        <button class="check" id="van"></button>
+                                    </div>
                                 </div>
                                 <div class="nexttopriceandcart hide col-9" style="padding: 0;">
-                                    <div class="nexttoprice hide col-12 " style="height: 50%; background-color: white;"></div>
-                                    <div class="spec-in hide col-12" style="height: 50%; background-color: #BAA285"></div>
+                                    <div class="nexttoprice hide col-12 " style="height: 50%; background-color: #BAA285;"></div>
+                                    <div class="spec-in hide col-12" style="height: 50%; background-color: white"></div>
                                 </div>
 
                                 <div class="priceandcart col-12" style="padding: 0%; height: 20%;">
-                                    <div class="price" style="height: 50%; background-color: white; padding-top: 10%; text-emphasis: bold;">Price</div>
-                                    <div class="addtocart" style=" height: 50%; background-color: black; color: white; padding-top: 10%; text-align: center;">Add to Cart</div>
+                                    <div class="price" style="height: 50%; background-color: #BAA285; padding-top: 10%; text-emphasis: bold; font-size: 1vw;">Price</div>
+                                    <div class="addtocart" style=" height: 50%; background-color: black; color: white; padding-top: 10%; text-align: center; font-size: .9vw;">Add to Cart</div>
                                 </div>
                             </div>
                         </div>

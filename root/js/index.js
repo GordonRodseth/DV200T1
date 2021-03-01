@@ -38,11 +38,38 @@ $(function(){
         $(".coffee").removeClass("active");
         $(this).addClass("active");
         document.getElementById("coffee-name").textContent= this.id;
+
+        if(this.id==="Cappucino"){
+            console.log("Cap");
+            $(".ex7").attr("style","background-image:url(../assets/cup-cap.svg)");
+        }
+
+        if(this.id==="Americano"){
+            console.log("Cap");
+            $(".ex7").attr("style","background-image:url(../assets/cup-amo.svg)");
+        }
+
+        if(this.id==="Latte"){
+            console.log("Cap");
+            $(".ex7").attr("style","background-image:url(../assets/cup-latte.svg)");
+        }
     });//switch btwn coffee types
 
-    $(".addons").on("click", function(){
-        $(this).toggleClass("col-3");
-        $(this).toggleClass("col-8");
+    $(".extras-title").on("click", function(){
+
+        console.log("click");
+
+        $(this).toggleClass("expand")
+
+        if($(this).hasClass("expand")){
+            $(this).attr("style","height:10%");
+        }
+        else{
+            $(this).attr("style","height:80%");
+        }
+
+        $(".addons").toggleClass("col-3");
+        $(".addons").toggleClass("col-8");
 
         $(".size").toggleClass("col-9");
         $(".size").toggleClass("col-4");
@@ -62,12 +89,47 @@ $(function(){
         $(".pics").toggleClass("col-12");
         $(".pic").toggle();
 
-        $(".extra-option").toggle();
+        $(".extras-options").toggle();
         $(".spec-in").toggle();
         $(".nexttoprice").toggle();
         $(".nexttopriceandcart").toggle();
 
     });//adjust size of order form columns as extras expands
+    
+    $(".check").on("click", function(){
+        $(this).toggleClass("selected");
+
+        console.log($(this).attr('id'));
+
+        if($(this).attr('id')==="sugar"){
+            $(".sugar").toggle();
+        }
+
+        if($(this).attr('id')==="cream"){
+            $(".cream").toggle();   
+        }
+        if($(this).attr('id')==="milk"){
+            $(".milk").toggle();
+        }
+        if($(this).attr('id')==="espresso"){
+            $(".espresso").toggle();
+        }
+        if($(this).attr('id')==="honey"){
+            $(".honey").toggle();
+        }
+        if($(this).attr('id')==="carm"){
+            $(".carm").toggle();
+        }
+        if($(this).attr('id')==="haze"){
+            $(".haze").toggle();
+        }
+        if($(this).attr('id')==="cin"){
+            $(".cin").toggle();
+        }
+        if($(this).attr('id')==="van"){
+            $(".van").toggle();
+        }
+    })
 
 })
 
