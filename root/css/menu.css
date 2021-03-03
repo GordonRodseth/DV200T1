@@ -40,6 +40,19 @@
     padding: 0;
 }
 
+.info-pic{
+    background-image: url(../assets/cup-amo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50%;
+}
+
+#coffee-desc{
+    padding-top: 10%;
+    font-weight: bolder;
+}
+
 .size-option{
     height: 30%;
     text-align: center; 

@@ -6,6 +6,10 @@
     font-size: 2vw;
 }
 
+li{
+    font-size: 1.5vw;
+}
+
 p{
     font-size: 1vw;
 }
@@ -54,7 +58,7 @@ html{
 
 
 .header{
-    height: 93vh;
+    height: 100vh;
     padding: 0;
 }
 
@@ -64,15 +68,21 @@ html{
 }
 
 .slide-1{
-    background-color: brown;
+    background-image: url(../assets/stock_amo.png);
+    background-position: center;
+    background-size: cover;
 }
 
 .slide-2{
-    background-color: blueviolet;
+    background-image: url(../assets/stock_capp.png);
+    background-position: center;
+    background-size: cover;
 }
 
 .slide-3{
-    background-color: coral;
+    background-image: url(../assets/stock_latte.png);
+    background-position: center;
+    background-size: cover;
 }
 
 .heading{

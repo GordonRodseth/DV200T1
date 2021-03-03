@@ -38,20 +38,47 @@ $(function(){
         $(".coffee").removeClass("active");
         $(this).addClass("active");
         document.getElementById("coffee-name").textContent= this.id;
+        var amdesc="Caffè Americano (also known as Americano or American; Italian pronunciation: [kafˈfɛ ameriˈkaːno]; Spanish: café americano, literally American coffee) is a type of coffee drink prepared by diluting an espresso with hot water, giving it a similar strength to, but different flavor from, traditionally brewed coffee. The strength of an Americano varies with the number of shots of espresso and the amount of water added."
+        var capdesc="A cappuccino (Italian pronunciation: [kapputˈtʃiːno]; Italian plural: cappuccini) is an espresso-based coffee drink that originated in Italy, and is traditionally prepared with steamed milk foam (microfoam) Variations of the drink involve the use of cream instead of milk, using non-dairy milks, and flavoring with cinnamon or chocolate powder. It is typically smaller in volume than a caffè latte, with a thicker layer of microfoam. The name comes from the Capuchin friars, referring to the colour of their habits, and in this context referring to the colour of the beverage when milk is added in small portion to dark, brewed coffee."
+        var latdesc="Caffe latte(/ˈlɑːteɪ/ or /ˈlæteɪ/) is a coffee drink made with espresso and steamed milk. The word comes from the Italian caffè e latte [kafˌfɛ e lˈlatte], caffelatte [kaffeˈlatte] or caffellatte [kaffelˈlatte], which means 'coffee & milk'. In northern Europe and Scandinavia, the term café au lait has traditionally been used for the combination of espresso and milk. In France, café latte is mostly known from the original Italian name of the drink (caffè latte or caffelatte)"
 
         if(this.id==="Cappucino"){
             console.log("Cap");
+            $(".info-pic").attr("style","background-image:url(../assets/cup-cap.svg)");
             $(".ex7").attr("style","background-image:url(../assets/cup-cap.svg)");
+
+            if($(".extras-title").hasClass("expand")){
+                $(".info-pic").hide();
+            }
+        
+            
+            document.getElementById("coffee-desc").textContent=capdesc;
         }
 
         if(this.id==="Americano"){
             console.log("Cap");
+
+            $(".info-pic").attr("style","background-image:url(../assets/cup-amo.svg)");
             $(".ex7").attr("style","background-image:url(../assets/cup-amo.svg)");
+
+            if($(".extras-title").hasClass("expand")){
+                $(".info-pic").hide();
+            }
+        
+            document.getElementById("coffee-desc").textContent=amdesc;
         }
 
         if(this.id==="Latte"){
             console.log("Cap");
+            $(".info-pic").attr("style","background-image:url(../assets/cup-latte.svg)");
             $(".ex7").attr("style","background-image:url(../assets/cup-latte.svg)");
+
+            if($(".extras-title").hasClass("expand")){
+                $(".info-pic").hide();
+            }
+        
+            
+            document.getElementById("coffee-desc").textContent=latdesc;
         }
     });//switch btwn coffee types
 
@@ -93,6 +120,9 @@ $(function(){
         $(".spec-in").toggle();
         $(".nexttoprice").toggle();
         $(".nexttopriceandcart").toggle();
+
+        $(".push").toggle();
+        $(".info-pic").toggle();
 
     });//adjust size of order form columns as extras expands
     
