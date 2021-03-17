@@ -131,4 +131,46 @@ html{
     float: right;
     margin-top: 7vh;
     right: 0;
+    overflow-y: scroll;
+}
+
+.cart-item{
+    margin-top: 1vh;
+    padding-top: 1vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    
+}
+
+.cart-total{
+    background-color: black;
+    color: white;
+    padding: 2%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+#item-size{
+    font-size: 2vw;
+    font-style: italic;
+}
+#item-type{
+    font-size: 3vw;
+    font-weight: bold;
+}
+#item-extras{
+    overflow: visible;
+    font-size: 1vw;
+    margin-top: 5%;
+}
+#item-price{
+    margin-top: 10%;
+    font-size: 2vw;
+    text-align: end;
+}
+#discount-code{
+    margin-top: 2%;
+}
+.enter-discount:hover{
+    cursor: pointer;
 }

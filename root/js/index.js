@@ -291,7 +291,20 @@ $(function(){
 
     })//Coffee options
 
-   
+
+    var carttotal=0;
+
+   $(".enter-discount").on("click", function(){
+
+        var usercode =document.getElementById("discount-code");
+
+        if (usercode="12345"){
+            carttotal=carttotal-10;
+            document.getElementById("total-price").textContent="R"+carttotal+".00";
+        }
+        
+
+   })
 
 
     $(".addtocart").on("click",function(){
@@ -358,6 +371,30 @@ $(function(){
         console.log(cart)
 
         console.log(extras);
+
+        $(".cart-elements").append(
+            "<div class='cart-item' style='background-color: burlywood;'>"+
+                "<h1 id='item-size'>"+ coffee_size+"</h1>"+
+                "<h2 id='item-type'>"+coffee_type+"</h2>"+
+                "<h3 id='item-extras'> With: "+extras+"</h3>"+
+                "<h3 id='item-price'> R"+coffee_cost+".00</h3>"+
+            "</div>"
+        );
+
+        carttotal=0;
+
+        for(i=0; i<cart.length;i++){
+            
+            carttotal=carttotal+cart[i].cost;
+        }
+
+        if(document.getElementById("discount-code")==="12345"){
+            carttotal=carttotal-10;
+            document.getElementById("total-price").textContent="R"+carttotal+".00";
+        }
+
+        document.getElementById("total-price").textContent="R"+carttotal+".00";
+
 
     })
     //add to cart
