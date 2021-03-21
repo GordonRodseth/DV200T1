@@ -122,20 +122,23 @@ html{
 }
 
 .cart{
-    height: 90vh;
+    height: fit-content;
     background-color: blanchedalmond ;
     box-shadow: black;
     z-index: 2;
     display: block;
-    position: fixed;
+    height: 93vh;
+    padding-bottom: 10vh;
     float: right;
     margin-top: 7vh;
     right: 0;
     overflow-y: scroll;
+    padding:0;
 }
 
+
 .cart-item{
-    margin-top: 1vh;
+    margin-bottom: 3vh;
     padding-top: 1vh;
     padding-left: 2vw;
     padding-right: 2vw;
@@ -147,7 +150,6 @@ html{
     color: white;
     padding: 2%;
     margin-top: 5%;
-    margin-bottom: 2%;
 }
 
 #item-size{
