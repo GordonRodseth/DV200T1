@@ -168,7 +168,7 @@ html{
     font-size: 2vw;
     text-align: end;
 }
-#discount-code{
+.discount{
     margin-top: 2%;
 }
 .enter-discount:hover{
