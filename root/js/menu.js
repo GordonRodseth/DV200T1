@@ -1,13 +1,14 @@
 
+
 var extras={sugar:0,
             cream:0,
             milk:0,
             espresso:0,
             honey:0,
             caramel:0,
-            hazel:0,
-            cin:0,
-            van:0};
+            hazelnut:0,
+            cinnamon:0,
+            vanilla:0};
 
 var extras_prices={sugar:1,
                 cream:5,
@@ -15,9 +16,9 @@ var extras_prices={sugar:1,
                 espresso:10,
                 honey:10,
                 caramel:15,
-                hazel:15,
-                cin:10,
-                van:10}
+                hazelnut:15,
+                cinnamon:10,
+                vanilla:10}
 
 var amdesc="Caffè Americano (also known as Americano or American; Italian pronunciation: [kafˈfɛ ameriˈkaːno]; Spanish: café americano, literally American coffee) is a type of coffee drink prepared by diluting an espresso with hot water, giving it a similar strength to, but different flavor from, traditionally brewed coffee. The strength of an Americano varies with the number of shots of espresso and the amount of water added."
 var capdesc="A cappuccino (Italian pronunciation: [kapputˈtʃiːno]; Italian plural: cappuccini) is an espresso-based coffee drink that originated in Italy, and is traditionally prepared with steamed milk foam (microfoam) Variations of the drink involve the use of cream instead of milk, using non-dairy milks, and flavoring with cinnamon or chocolate powder. It is typically smaller in volume than a caffè latte, with a thicker layer of microfoam. The name comes from the Capuchin friars, referring to the colour of their habits, and in this context referring to the colour of the beverage when milk is added in small portion to dark, brewed coffee."
@@ -61,8 +62,9 @@ class CoffeeClass{
         document.getElementById("coffee-desc").textContent=capdesc;
         document.getElementById("coffee_name").textContent= "Cappucino";
 
-
-
+        document.getElementById("#ing2").textContent="|  Steamed Milk  |";
+        document.getElementById("#ing1").textContent="|   Espresso   |";
+        document.getElementById("#ing3").textContent="|  Frothed Milk  |";
     }
     makeAmo=()=>{
         this.type="Americano";
@@ -77,6 +79,10 @@ class CoffeeClass{
         }
         document.getElementById("coffee-desc").textContent=amdesc;
         document.getElementById("coffee_name").textContent= "Americano";
+
+        document.getElementById("#ing2").textContent="|   Hot Water   |";
+        document.getElementById("#ing1").textContent="|   Espresso   |";
+        document.getElementById("#ing3").textContent=" ";
     }
     makeLatte=()=>{
         this.type="Caffe Latte";
@@ -90,6 +96,10 @@ class CoffeeClass{
         }
         document.getElementById("coffee-desc").textContent=latdesc;
         document.getElementById("coffee_name").textContent= "Caffe Latte";
+
+        document.getElementById("#ing2").textContent="|  Steamed Milk  |";
+        document.getElementById("#ing1").textContent="|   Espresso   |";
+        document.getElementById("#ing3").textContent="|   Foam   |";
     }
 
     makeSmall=()=>{
@@ -287,7 +297,7 @@ var checkDiscount=(current_price)=>{
 var addToCart=()=>{
 
     var allextras=" ";
-
+    document.getElementById("#showcart").textContent="Cart*";
     cart.push(new CoffeeClass(myCoffee.type,myCoffee.size,myCoffee.typeCost,myCoffee.sizeCost,myCoffee.extrasCost))
     console.log(cart);
 
@@ -295,7 +305,8 @@ var addToCart=()=>{
     getCartTotal();
 
     $(".cart-elements").append(
-        "<div class='cart-item' style='background-color: burlywood;'>"+
+        "<div class='cart-item'>"+
+            "<div class='line'></div>"+
             "<h1 id='item-size'>"+ myCoffee.size+"</h1>"+
             "<h2 id='item-type'>"+myCoffee.type+"</h2>"+
             "<h3 id='item-extras'> With: "+allextras+"</h3>"+
@@ -304,3 +315,4 @@ var addToCart=()=>{
     );
     
 }
+

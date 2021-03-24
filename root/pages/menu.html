@@ -36,8 +36,8 @@
                 <a class="icon-link" href="../index.html"><img src="../assets/coffee-icon.svg" class="icon"></a><!--top-left logo-->
                 
                 <div class="nav-items">
-                    <div class="nav-item"><a class="nav-link" href="menu.html">Menu</a></div>
-                    <div class="nav-item"><div class="button showcart">Cart</div></div>                    
+                    <div class="nav-item"><a class="nav-link" href="menu.html"  style="color: gray;">Menu</a></div>
+                    <div class="nav-item"><div class="button showcart" id="#showcart">Cart</div></div>                    
                 </div>
                 
             </nav>
@@ -48,8 +48,8 @@
                     <a class="icon-link" href="../index.html"><img src="../assets/coffee-icon.svg" class="icon"></a><!--top-left logo-->
 
                     <div class="nav-items">
-                        <div class="nav-item"><a class="nav-link" href="menu.html">Menu</a></div>
-                        <div class="nav-item"><div class="button showcart">Cart</div></div>                    
+                        <div class="nav-item"><a class="nav-link" href="menu.html"  style="color: gray;">Menu</a></div>
+                        <div class="nav-item"><div class="button showcart" id="#showcart" style="color: gray;">Cart</div></div>                    
                     </div>
 
 
@@ -61,10 +61,9 @@
 
                     <div class="cart-elements" style="background-color: none;">
                     </div>
-
+                    <div class='line'></div>
                     <div class="discount row col-12" style="background-color: burlywood;">
-                        <input type="text" id="discountcode" class="col-6" placeholder="Discount Code?" style="font-size: large;">
-                        <div class="col-3"></div>
+                        <input type="text" id="discountcode" class="col-9" placeholder="Discount Code?" style="font-size: large;">
                         <div class="enter-discount col-3" style="background-color: black; color: white;" onclick="getCartTotal()">Enter</div>
                     </div>
 
@@ -154,11 +153,11 @@
 
                                     <!--Middle Row-->
                                     <div class="ex5 col-2" style="height:50%;">
-                                        <div class="extra carm hide"></div>
+                                        <div class="extra caramel hide"></div>
                                     </div>
                                     <!--middle far left square-->
                                     <div class="ex6 col-2" style="height:50%;">
-                                        <div class="extra haze hide"></div>
+                                        <div class="extra hazelnut hide"></div>
                                     </div>
                                     <!--middle left of centre square-->
                                     <div class="ex7 col-4" style="height:50%;"></div>
@@ -176,11 +175,11 @@
                                     <div class="col-3" style="height: 15%;"></div>
                                     <!--bottom far left square-->
                                     <div class="ex10 col-3" style="height: 15%;">
-                                        <div class="extra cin hide"></div>
+                                        <div class="extra cinnamon hide"></div>
                                     </div>
                                     <!--bottom left of centre square-->
                                     <div class="ex11 col-3" style="height: 15%;">
-                                        <div class="extra van hide"></div>
+                                        <div class="extra vanilla hide"></div>
                                     </div>
                                     <!--bottom right of centre square-->
                                     <div class="col-3" style="height: 15%;"></div>
@@ -190,11 +189,12 @@
                                 <!--Picture when extra tab expanded-->
 
                                 <div class="madewith row col-12" style="height: 15%; background-color: #BAA285; text-align: left;">
-                                    <h1 class="col-7" style="font-weight: bolder;">Made With:</h1>
-                                    <ul class="ingr col-5">
-                                        <li>Espresso</li>
-                                        <li>Hot Water</li>
-                                    </ul>
+                                    <h1 class="col-6" style="font-weight: bolder; font-size: x-large;">Made With:</h1>
+                                    <div class="ingr col-12 row">
+                                        <div id="#ing1" class="ingredient col-4"></div>
+                                        <div id="#ing2" class="ingredient col-4"></div>
+                                        <div id="#ing3" class="ingredient col-4"></div>
+                                    </div>
                                 </div>
                                 <!--"Made with" section-->
 
@@ -230,47 +230,47 @@
                                     <div class="extra-option" style="background-color: white;">
                                         <div class="extra-name">Sugar</div>
                                         <button class="check" id="sugar" onclick="selectExtras('sugar')"></button>
-                                        <div class="option_cost" >R 1.00</div>
+                                        <div class="option_cost" >+ R 1.00</div>
                                     </div>
                                     <div class="extra-option" style="background-color: #BAA285;">
                                         <div class="extra-name">Cream</div>
                                         <button class="check" id="cream" onclick="selectExtras('cream')"></button>
-                                        <div class="option_cost" >R 5.00</div>
+                                        <div class="option_cost" >+ R 5.00</div>
                                     </div>
                                     <div class="extra-option" style="background-color: white">
                                         <div class="extra-name">Extra Milk</div>
                                         <button class="check" id="milk" onclick="selectExtras('milk')"></button>
-                                        <div class="option_cost" >R 5.00</div>
+                                        <div class="option_cost" >+ R 5.00</div>
                                     </div>
                                     <div class="extra-option" style="background-color: #BAA285;">
                                         <div class="extra-name">Extra Espresso</div>
                                         <button class="check" id="espresso" onclick="selectExtras('espresso')"></button>
-                                        <div class="option_cost" >R 10.00</div>
+                                        <div class="option_cost" >+ R 10.00</div>
                                     </div>
                                     <div class="extra-option" style="background-color: white">
                                         <div class="extra-name">Honey</div>
                                         <button class="check" id="honey" onclick="selectExtras('honey')"></button>
-                                        <div class="option_cost" >R 10.00</div>
+                                        <div class="option_cost" >+ R 10.00</div>
                                     </div>
                                     <div class="extra-option" style="background-color: #BAA285;">
                                         <div class="extra-name">Caramel Syrup</div>
                                         <button class="check" id="caramel" onclick="selectExtras('caramel')"></button>
-                                        <div class="option_cost" >R 15.00</div>
+                                        <div class="option_cost" >+ R 15.00</div>
                                     </div>
                                     <div class="extra-option" style="background-color: white;">
                                         <div class="extra-name">Hazelnut Syrup</div>
-                                        <button class="check" id="hazel" onclick="selectExtras('hazel')"></button>
-                                        <div class="option_cost" >R 15.00</div>
+                                        <button class="check" id="hazelnut" onclick="selectExtras('hazelnut')"></button>
+                                        <div class="option_cost" >+ R 15.00</div>
                                     </div>
                                     <div class="extra-option" style="background-color: #BAA285">
                                         <div class="extra-name">Cinnamon</div>
-                                        <button class="check" id="cin" onclick="selectExtras('cin')"></button>
-                                        <div class="option_cost" >R 10.00</div>
+                                        <button class="check" id="cinnamon" onclick="selectExtras('cinnamon')"></button>
+                                        <div class="option_cost" >+ R 10.00</div>
                                     </div>
                                     <div class="extra-option" style="background-color: white;">
                                         <div class="extra-name">Vanilla</div>
-                                        <button class="check" id="van" onclick="selectExtras('van')"></button>
-                                        <div class="option_cost" >R 10.00</div>
+                                        <button class="check" id="vanilla" onclick="selectExtras('vanilla')"></button>
+                                        <div class="option_cost" >+ R 10.00</div>
                                     </div>
                                 </div>
                                 <!--Extras-->

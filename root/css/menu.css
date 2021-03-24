@@ -1,3 +1,15 @@
+.ingredient{
+    font-size: medium;
+    font-weight: bold;
+    padding-top: 1vh;
+    text-align: left;
+}
+
+.ingr{
+    margin-top: 0;
+    text-align: left;
+}
+
 .coffees{
     height: 45vh;
     margin-top: 5vh;
@@ -141,13 +153,13 @@
     background-repeat: no-repeat;
 }
 
-.carm{
+.caramel{
     background-image: url(../assets/syrup_carm.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
 }
-.haze{
+.hazelnut{
     background-image: url(../assets/syrup_hazel.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -182,13 +194,13 @@
     background-position: bottom;
 }
 
-.cin{
+.cinnamon{
     background-image: url(../assets/cinnamon.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
-.van{
+.vanilla{
     background-image: url(../assets/vanilla.svg);
     background-size: contain;
     background-repeat: no-repeat;

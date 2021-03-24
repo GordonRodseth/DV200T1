@@ -6,6 +6,15 @@
     font-size: 2vw;
 }
 
+.line{
+    background-color: black;
+    height: 2px;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5vh;
+}
+
 li{
     font-size: 1.5vw;
 }
@@ -166,7 +175,6 @@ html{
     margin-top: 5%;
 }
 #item-price{
-    margin-top: 10%;
     font-size: 2vw;
     text-align: end;
 }
