@@ -62,9 +62,7 @@ class CoffeeClass{
         document.getElementById("coffee-desc").textContent=capdesc;
         document.getElementById("coffee_name").textContent= "Cappucino";
 
-        document.getElementById("#ing2").textContent="|  Steamed Milk  |";
-        document.getElementById("#ing1").textContent="|   Espresso   |";
-        document.getElementById("#ing3").textContent="|  Frothed Milk  |";
+        document.getElementById("#ing").textContent="Espresso, Steamed Milk & Frothed Milk";
     }
     makeAmo=()=>{
         this.type="Americano";
@@ -80,9 +78,7 @@ class CoffeeClass{
         document.getElementById("coffee-desc").textContent=amdesc;
         document.getElementById("coffee_name").textContent= "Americano";
 
-        document.getElementById("#ing2").textContent="|   Hot Water   |";
-        document.getElementById("#ing1").textContent="|   Espresso   |";
-        document.getElementById("#ing3").textContent=" ";
+        document.getElementById("#ing").textContent="Espresso & Hot Water"
     }
     makeLatte=()=>{
         this.type="Caffe Latte";
@@ -97,9 +93,7 @@ class CoffeeClass{
         document.getElementById("coffee-desc").textContent=latdesc;
         document.getElementById("coffee_name").textContent= "Caffe Latte";
 
-        document.getElementById("#ing2").textContent="|  Steamed Milk  |";
-        document.getElementById("#ing1").textContent="|   Espresso   |";
-        document.getElementById("#ing3").textContent="|   Foam   |";
+        document.getElementById("#ing").textContent="Espresso, Steamed Milk & Foam";
     }
 
     makeSmall=()=>{
@@ -175,52 +169,67 @@ $(function() {
 
 
 
-    $(".extras-title").on("click", function(){
 
-        console.log("click");
-
-        $(this).toggleClass("expand")
-
-        if($(this).hasClass("expand")){
-            $(this).attr("style","height:10%");
-        }
-        else{
-            $(this).attr("style","height:80%");
-        }
-
-        $(".addons").toggleClass("col-3");
-        $(".addons").toggleClass("col-8");
-
-        $(".size").toggleClass("col-9");
-        $(".size").toggleClass("col-4");
-
-        $(".info").toggleClass("col-8");
-        $(".info").toggleClass("col-6");
-
-        $(".options").toggleClass("col-4");
-        $(".options").toggleClass("col-6");
-
-        $(".priceandcart").toggleClass("col-12");
-        $(".priceandcart").toggleClass("col-3");
-
-        $(".description").toggle();
-
-        $(".pics").toggleClass("col-6");
-        $(".pics").toggleClass("col-12");
-        $(".pic").toggle();
-
-        $(".extras-options").toggle();
-        $(".spec-in").toggle();
-        $(".nexttoprice").toggle();
-        $(".nexttopriceandcart").toggle();
-
-        $(".push").toggle();
-        $(".info-pic").toggle();
-
-    });
-    //Expand Extras bar
 
 });
+
+var isexpanded=0;
+
+function toggleExpand(){
+
+    $(".options").toggleClass("col-md-4 col-sm-12");
+    $(".options").toggleClass("col-md-6 col-sm-12");
+
+    if (isexpanded===0){
+        isexpanded=1;
+
+        $(".sizes").animate({width:'40%'},"fast");
+
+        $(".addons").animate({width:'60%'},"fast");
+
+        console.log("expand");
+    }
+    else{
+        isexpanded=0;
+
+        $(".addons").animate({width:'25%'},"fast");
+
+        $(".sizes").animate({width:'75%'},"fast");
+
+        
+        console.log("unexpand");
+    }
+
+    console.log(isexpanded);
+
+
+
+
+    
+
+    $(".info").toggleClass("col-md-8 col-sm-12");
+    $(".info").toggleClass("col-md-6 col-sm-12");
+
+    $(".priceandcart").toggleClass("col-12");
+    $(".priceandcart").toggleClass("col-3");
+
+    $(".description").toggle();
+
+    $(".pics").toggleClass("col-md-6 col-sm-12");
+    $(".pics").toggleClass("col-12");
+    $(".pic").toggle();
+
+    $(".extras-options").toggle();
+    $(".spec-in").toggle();
+    $(".nexttoprice").toggle();
+    $(".nexttopriceandcart").toggle();
+
+    $(".push").toggle();
+    $(".info-pic").toggle();
+
+
+    //Expand Extras bar
+}
 
 var selectSize=(selection)=>{
     $(".size").removeClass("selected");

@@ -1,6 +1,5 @@
-$(function() {$(".container-fluid").hide()})
-
-
+var dummyElement = document.createElement('div');
+document.getElementById = jasmine.createSpy('HTML Element').and.returnValue(dummyElement);
 
 describe("MakeCap function", function(){
     

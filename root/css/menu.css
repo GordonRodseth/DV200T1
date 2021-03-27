@@ -1,8 +1,9 @@
 .ingredient{
     font-size: medium;
     font-weight: bold;
-    padding-top: 1vh;
-    text-align: left;
+    padding: 1vh;
+    text-align: center;
+    width: fit-content;
 }
 
 .ingr{
@@ -38,18 +39,22 @@
     color: black;
     width: 100%;
     height: 20%;
-    margin-top: 30%;
-    margin-bottom: 40%;
+    margin-top: 15vh;
+    margin-bottom: 50%;
     text-align: center;
     padding: 3%;
 }
 
 .order-form{
-    background-color: rgb(182, 182, 182);
+    background-color: #BAA285;
     margin-top: 20vh;
-    height: 70vh;
+    height: fit-content;
     width: 100%;
     padding: 0;
+}
+
+.info{
+    height: 70vh;
 }
 
 .info-pic{
@@ -60,9 +65,29 @@
     height: 50%;
 }
 
+.pics{
+    height:75%; 
+    background-color: #BAA285; 
+}
+
+.description{
+    height:75%; 
+    background-color: #BAA285
+}
+
 #coffee-desc{
     padding-top: 10%;
     font-weight: bolder;
+}
+
+.madewith{
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+}
+
+.options{
+    height:70vh;
 }
 
 .size-option{
@@ -103,6 +128,7 @@
     width: 40%;
     padding: 2%;
     font-size: 1vw;
+    font-weight: bold;
     justify-content: left;
     float: left;
 }
@@ -209,11 +235,12 @@
 
 .price{
     height: 50%; 
-    background-color: #BAA285; 
-    padding-top: 10%; 
+    background-color: #927756;; 
+    padding-top: 10%;
+    padding-bottom: 5%; 
     text-align: center;
     font-weight: bolder;
-    font-size: large;
+    font-size: medium;
 }
 
 .addtocart{
@@ -226,4 +253,52 @@
 }
 .addtocart:hover{
     cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 768px){
+    .coffees{
+        height: 135vh;
+        margin-top: 2vh;
+    }
+    
+    .coffee{
+        height: 30%;
+    }
+    .info{
+        height: 70vh;
+    }
+
+    #coffee-desc{
+        padding-top: 5%;
+        font-size:small;
+    }
+    .pics{
+        height:60%; 
+        background-size: auto;
+        padding-bottom: 30%;
+    }
+    .ex7{
+        height:70%;
+    }
+    
+    .description{
+        height:37.5%; 
+        font-size: x-large;
+        margin-bottom: 0px;
+    }
+    .options{
+        height:70vh;
+    }
+    .info-pic{
+        height: 60%;
+        background-position: top;
+        margin-top: 0;
+    }
+
+    .push{height: 0px;}
+
+    .extra-name{font-size: 2vw;}
+
 }
