@@ -56,7 +56,7 @@
                 </nav>
                 <!--navbar for overlay-->
                 
-                <div class="cart col-4">
+                <div class="cart col-6 col-md-4">
                     <h1 style="text-align: center; font-size: xxx-large; font-weight: bolder; margin-top: 5%; margin-bottom: 5%;">Cart</h1>
 
                     <div class="cart-elements" style="background-color: none;">
@@ -113,10 +113,10 @@
                     </div>
                     <!--select coffee type-->
 
-                    <div class="order-form row col-12">
+                    <div class="order-form row col-12" style="box-shadow:0px 5px 10px rgba(0, 0, 0, 0.3)">
 
                         <div class="info row col-md-8 col-sm-12">
-                            <div class="name col-12" style="height: 10%; background-color: white; border: black; border-style: solid; border-width: thick; text-align: center;"><h1 id="coffee_name">Americano</h1></div>
+                            <div class="name col-12" style="height: 10%; background-color: white; border: black; border-style: solid; border-width: thick; text-align: center; box-shadow:0px 5px 10px rgba(0, 0, 0, 0.3)"><h1 id="coffee_name">Americano</h1></div>
                             <!--coffee type name-->
                             <div class="description col-md-6 col-sm-12"><p id="coffee-desc"></p></div>
                             <!--coffee description-->
@@ -125,7 +125,7 @@
                                 <div class="push col-12" style="height: 15%;"></div>
                                 <!--push down-->
 
-                                <div class="info-pic col-12"></div>
+                                <div class="info-pic-container col-12"><div class="info-pic "></div></div>
                                 <!--picture when extras tab not expanded-->
 
                                 <div class="pic row col-12 hide" style="height: 85%;">
@@ -135,7 +135,7 @@
                                         <div class="extra honey hide"></div>
                                     </div>
                                     <!--top left square-->
-                                    <div class="ex7p5 col-2" style="height: 35%;"></div>
+                                    <div class="col-2" style="height: 35%;"></div>
                                     <!--top centre square-->
                                     <div class="ex2n3 row col-3" style="height: 35%;">
                                         <div class="ex2 col-12" style=" height: 50%;">
@@ -160,7 +160,7 @@
                                         <div class="extra hazelnut hide"></div>
                                     </div>
                                     <!--middle left of centre square-->
-                                    <div class="ex7 col-4" style="height:50%;"></div>
+                                    <div class="ex7-container col-4" style="height:50%"><div class="ex7" style="width: 100%;"></div></div>
                                     <!--middle centre square-->
                                     <div class="ex8 col-2" style="height:50%;">
                                         <div class="extra espresso hide"></div>
@@ -191,7 +191,7 @@
                             </div>
                             <!--Image section-->
 
-                            <div class="madewith row col-12" style="height: 15%; background-color: #BAA285; text-align: left;">
+                            <div class="madewith row col-12" style="height: 15%; background-color: #b68c5a; text-align: left;">
                                 <h1 class="col-md-6 col-sm-12" style="font-weight: bolder; font-size: x-large; width:fit-content">Made With:</h1>
                                 <div class="ingr col-12 row">
                                     <div id="#ing" class="ingredient"></div>
@@ -202,19 +202,19 @@
                         <!--coffee info/pic column-->
 
                         <div class="options row col-md-4 col-sm-12">
-                            <div class="sizes" style="height: 100%; background-color: #fdf8f2; text-align: center; width: 75%">
-                                <div class="title" style="height:10%;  background-color: #C6BDB2; text-align: center; font-size: x-large; font-weight: bold;">Size</div>
-                                <div class="size-option" style="background-color: #fdf8f2">
+                            <div class="sizes" style="height: 100%; background-color: white; text-align: center; width: 75%; box-shadow:-5px 0px 10px rgba(0, 0, 0, 0.3)">
+                                <div class="title" style="height:10%;  background-color: #c2b09b; text-align: center; font-size: x-large; font-weight: bold;">Size</div>
+                                <div class="size-option" style="background-color: white">
                                     <h2 style="font-weight: bold;">Small</h2>
                                     <button class="check size small" id="small" onclick="selectSize('small')"></button>
                                     <h1 class="size_cost" id="small_price">Price</h1>
                                 </div>
-                                <div class="size-option" style="background-color: #C6BDB2;">
+                                <div class="size-option" style="background-color: #c2b09b;">
                                     <h2 style="font-weight: bold;">Tall</h2>
                                     <button class="check size selected tall" id="tall" onclick="selectSize('tall')"></button>
                                     <h1 class="size_cost" id="tall_price">Price</h1>
                                 </div>
-                                <div class="size-option" style="background-color: #fdf8f2; ">
+                                <div class="size-option" style="background-color: white; ">
                                     <h2 style="font-weight: bold;">Grande</h2>
                                     <button class="check size grande" id="grande" onclick="selectSize('grande')"></button>
                                     <h1 class="size_cost" id="grande_price">Price</h1>
@@ -222,15 +222,15 @@
                             </div>
                             <!--Sizes column-->
 
-                            <div class="addons" style="height: 100%; background-color: #927756; padding: 0; width:25%;">
-                                <div class="extras-title" style="background-color: #927756; height: 10%; padding: 0;" onclick="toggleExpand()">Extras</div>
+                            <div class="addons" style="height: 100%; background-color: #dba563; padding: 0; width:25%; box-shadow:-5px 0px 10px rgba(0, 0, 0, 0.3)">
+                                <div class="extras-title" style="background-color: #dba563; height: 10%; padding: 0;" onclick="toggleExpand()">Extras</div>
                                 <div class="extras-options hide" style="height: 70%; padding: 0%;">
                                     <div class="extra-option" style="background-color: white;">
                                         <div class="extra-name">Sugar</div>
                                         <button class="check" id="sugar" onclick="selectExtras('sugar')"></button>
                                         <div class="option_cost" >+ R 1.00</div>
                                     </div>
-                                    <div class="extra-option" style="background-color: #927756;">
+                                    <div class="extra-option" style="background-color: #dba563;">
                                         <div class="extra-name">Cream</div>
                                         <button class="check" id="cream" onclick="selectExtras('cream')"></button>
                                         <div class="option_cost" >+ R 5.00</div>
@@ -240,7 +240,7 @@
                                         <button class="check" id="milk" onclick="selectExtras('milk')"></button>
                                         <div class="option_cost" >+ R 5.00</div>
                                     </div>
-                                    <div class="extra-option" style="background-color: #927756;">
+                                    <div class="extra-option" style="background-color: #dba563;">
                                         <div class="extra-name">Extra Espresso</div>
                                         <button class="check" id="espresso" onclick="selectExtras('espresso')"></button>
                                         <div class="option_cost" >+ R 10.00</div>
@@ -250,7 +250,7 @@
                                         <button class="check" id="honey" onclick="selectExtras('honey')"></button>
                                         <div class="option_cost" >+ R 10.00</div>
                                     </div>
-                                    <div class="extra-option" style="background-color: #927756;">
+                                    <div class="extra-option" style="background-color: #dba563">
                                         <div class="extra-name">Caramel Syrup</div>
                                         <button class="check" id="caramel" onclick="selectExtras('caramel')"></button>
                                         <div class="option_cost" >+ R 15.00</div>
@@ -260,7 +260,7 @@
                                         <button class="check" id="hazelnut" onclick="selectExtras('hazelnut')"></button>
                                         <div class="option_cost" >+ R 15.00</div>
                                     </div>
-                                    <div class="extra-option" style="background-color: #927756">
+                                    <div class="extra-option" style="background-color: #dba563">
                                         <div class="extra-name">Cinnamon</div>
                                         <button class="check" id="cinnamon" onclick="selectExtras('cinnamon')"></button>
                                         <div class="option_cost" >+ R 10.00</div>
@@ -274,7 +274,7 @@
                                 <!--Extras-->
 
                                 <div class="nexttopriceandcart hide col-9" style="padding: 0;">
-                                    <div class="nexttoprice hide col-12 " style="height: 50%; background-color: #BAA285;"></div>
+                                    <div class="nexttoprice hide col-12 " style="height: 50%; background-color: #dba563;"></div>
                                     <div class="spec-in hide col-12" style="height: 50%; background-color: white"></div>
                                 </div>
                                 <!--push-->

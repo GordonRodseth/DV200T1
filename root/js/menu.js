@@ -1,5 +1,3 @@
-
-
 var extras={sugar:0,
             cream:0,
             milk:0,
@@ -52,63 +50,90 @@ class CoffeeClass{
         this.type="Cappucino";
         this.typeCost=30;
         this.updatePrice();
-
         $(".info-pic").attr("style","background-image:url(../assets/cup-cap.svg)");
-        $(".ex7").attr("style","background-image:url(../assets/cup-cap.svg)");
+        $(".ex7").attr("style","background-image:url(../assets/cup-cap.svg);");
 
-        if($(".extras-title").hasClass("expand")){
-            $(".info-pic").hide();
+        if(isexpanded===1){
+            $(".info-pic-container").hide();
         }
+        
         document.getElementById("coffee-desc").textContent=capdesc;
         document.getElementById("coffee_name").textContent= "Cappucino";
 
         document.getElementById("#ing").textContent="Espresso, Steamed Milk & Frothed Milk";
     }
+
     makeAmo=()=>{
         this.type="Americano";
         this.typeCost=20;
         this.updatePrice();
-
         $(".info-pic").attr("style","background-image:url(../assets/cup-amo.svg)");
-        $(".ex7").attr("style","background-image:url(../assets/cup-amo.svg)");
+        $(".ex7").attr("style","background-image:url(../assets/cup-amo.svg);");
 
-        if($(".extras-title").hasClass("expand")){
-            $(".info-pic").hide();
+        if(isexpanded===1){
+            $(".info-pic-container").hide();
         }
+
         document.getElementById("coffee-desc").textContent=amdesc;
         document.getElementById("coffee_name").textContent= "Americano";
 
         document.getElementById("#ing").textContent="Espresso & Hot Water"
     }
+
     makeLatte=()=>{
         this.type="Caffe Latte";
         this.typeCost=40;
         this.updatePrice();
         $(".info-pic").attr("style","background-image:url(../assets/cup-latte.svg)");
-        $(".ex7").attr("style","background-image:url(../assets/cup-latte.svg)");
+        $(".ex7").attr("style","background-image:url(../assets/cup-latte.svg);");
 
-        if($(".extras-title").hasClass("expand")){
-            $(".info-pic").hide();
+        if(isexpanded===1){
+            $(".info-pic-container").hide();
         }
+
         document.getElementById("coffee-desc").textContent=latdesc;
         document.getElementById("coffee_name").textContent= "Caffe Latte";
-
         document.getElementById("#ing").textContent="Espresso, Steamed Milk & Foam";
     }
 
     makeSmall=()=>{
         this.size="Small";
         this.sizeCost=0;
+
+        $(".info-pic-container").animate({height:"50%"}, "medium");
+        $(".ex7-container").animate({height:"35%"}, "medium");
+
+        if(isexpanded===1){
+            $(".info-pic-container").hide();
+        }
+
         this.updatePrice();
+
     }
     makeTall=()=>{
         this.size="Tall";
         this.sizeCost=10;
+        
+        $(".info-pic-container").animate({height:"70%"}, "medium");
+        $(".ex7-container").animate({height:"40%"}, "medium");
+
+        if(isexpanded===1){
+            $(".info-pic-container").hide();
+        }
+
         this.updatePrice();
     }
     makeGrande=()=>{
         this.size="Grande";
         this.sizeCost=20;
+
+        $(".info-pic-container").animate({height:"100%"}, "medium");
+        $(".ex7-container").animate({height:"50%"}, "medium");
+
+        if(isexpanded===1){
+            $(".info-pic-container").hide();
+        }
+        
         this.updatePrice();
     }
 
@@ -159,18 +184,11 @@ $(function() {
     });
     //show cart overlay
 
-     
-
     $(".coffee").on("click", function(){
         $(".coffee").removeClass("active");
         $(this).addClass("active");
     });
     //switching btwn coffee types
-
-
-
-
-
 });
 
 var isexpanded=0;
@@ -183,29 +201,26 @@ function toggleExpand(){
     if (isexpanded===0){
         isexpanded=1;
 
-        $(".sizes").animate({width:'40%'},"fast");
+        $(".sizes").animate({width:'40%'},"medium");
 
-        $(".addons").animate({width:'60%'},"fast");
+        $(".addons").animate({width:'60%'},"medium");
 
         console.log("expand");
+        $(".info-pic-container").hide();
     }
     else{
         isexpanded=0;
 
-        $(".addons").animate({width:'25%'},"fast");
+        $(".addons").animate({width:'25%'},"medium");
 
-        $(".sizes").animate({width:'75%'},"fast");
+        $(".sizes").animate({width:'75%'},"medium");
 
         
         console.log("unexpand");
+        $(".info-pic-container").show();
     }
 
     console.log(isexpanded);
-
-
-
-
-    
 
     $(".info").toggleClass("col-md-8 col-sm-12");
     $(".info").toggleClass("col-md-6 col-sm-12");
@@ -225,7 +240,7 @@ function toggleExpand(){
     $(".nexttopriceandcart").toggle();
 
     $(".push").toggle();
-    $(".info-pic").toggle();
+    
 
 
     //Expand Extras bar
@@ -250,7 +265,7 @@ var selectSize=(selection)=>{
 var selectExtras=(selection)=>{
     
     $("#"+selection).toggleClass("selected");
-    $("."+selection).toggle();
+    $("."+selection).slideToggle();
 
 
     if($("#"+selection).hasClass("selected")){
@@ -297,10 +312,10 @@ var checkDiscount=(current_price)=>{
     var code=discountcode.value;
 
     if(code==="12345"){
-        total=total-10;
+        total=total-(total/4);
         console.log("12345")
     }
-    document.getElementById("total-price").textContent="R"+total+".00";
+    document.getElementById("total-price").textContent="R"+total;
 }
 
 var addToCart=()=>{

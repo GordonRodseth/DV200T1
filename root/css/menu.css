@@ -45,8 +45,9 @@
     padding: 3%;
 }
 
+
 .order-form{
-    background-color: #BAA285;
+    background-color: #b68c5a;
     margin-top: 20vh;
     height: fit-content;
     width: 100%;
@@ -67,17 +68,18 @@
 
 .pics{
     height:75%; 
-    background-color: #BAA285; 
+    background-color: #b68c5a; 
 }
 
 .description{
     height:75%; 
-    background-color: #BAA285
+    background-color: #b68c5a
 }
 
 #coffee-desc{
     padding-top: 10%;
     font-weight: bolder;
+    font-size: medium;
 }
 
 .madewith{
@@ -193,10 +195,10 @@
 }
 
 .ex7{
-    background-image: url(../assets/cup-amo.svg);
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
+    height:100%;
 }
 
 .ex7p5{
@@ -235,7 +237,7 @@
 
 .price{
     height: 50%; 
-    background-color: #927756;; 
+    background-color: #dba563; 
     padding-top: 10%;
     padding-bottom: 5%; 
     text-align: center;
@@ -249,8 +251,9 @@
     color: white; 
     padding-top: 10%; 
     text-align: center; 
-    font-size: .9vw;
+    font-size: medium;
 }
+
 .addtocart:hover{
     cursor: pointer;
 }

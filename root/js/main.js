@@ -25,20 +25,18 @@ $(function() {
 
 
     $(".slide").on("click", function(){
-
+        
         console.log("slide click");
+        $(this).animate({width:"0"})
 
         if($(this).hasClass("slide-1")){
-            $(this).toggleClass("slide-1");
-            $(this).addClass("slide-2");
+            $(".slide-2").animate({width:"100%"})  
         }
         else if($(this).hasClass("slide-2")){
-            $(this).toggleClass("slide-2");
-            $(this).addClass("slide-3");
+            $(".slide-3").animate({width:"100%"})  
         }
         else if($(this).hasClass("slide-3")){
-            $(this).toggleClass("slide-3");
-            $(this).addClass("slide-1");
+            $(".slide-1").animate({width:"100%"})  
         }
     })
     //slider
